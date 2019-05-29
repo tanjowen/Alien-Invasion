@@ -31,11 +31,11 @@ submit.on("click", function() {
 	var inputCountry = d3.select("#country");
 	var inputShape = d3.select("#shape");
   // Get the value property of the input element
-	var filterDate = inputDate.property("value");
-	var filterCity = inputCity.property("value");
-	var filterState = inputState.property("value");
-	var filterCountry = inputCountry.property("value");
-	var filterShape = inputShape.property("value");
+	var filterDate = inputDate.property("value").trim();
+	var filterCity = inputCity.property("value").trim().toLowerCase();
+	var filterState = inputState.property("value").trim().toLowerCase();
+	var filterCountry = inputCountry.property("value").trim().toLowerCase();
+	var filterShape = inputShape.property("value").trim().toLowerCase();
 
 
 	if (filterDate != "") {
